@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  uses: MyText
+  fragrance_profile: MyText
+  medical_properties: MyText
+
+two:
+  name: MyString
+  description: MyText
+  uses: MyText
+  fragrance_profile: MyText
+  medical_properties: MyText
