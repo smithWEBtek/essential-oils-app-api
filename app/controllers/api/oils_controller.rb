@@ -29,7 +29,7 @@ class API::OilsController < ApplicationController
 
   def destroy
     if @oil.destroy
-      render status: 204
+      render json: @oil, status: 200
     else
       render json: { message: "Unable to Remove this Oil!" }, status:400
     end
