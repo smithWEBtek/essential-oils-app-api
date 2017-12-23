@@ -10,14 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171128175241) do
+ActiveRecord::Schema.define(version: 20171223041059) do
+
+  create_table "medical_properties", force: :cascade do |t|
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "oil_med_props", force: :cascade do |t|
+    t.integer "oil_id"
+    t.integer "medical_property_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "oil_uses", force: :cascade do |t|
+    t.integer "oil_id"
+    t.integer "use_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "oils", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.text "uses"
     t.text "fragrance_profile"
-    t.text "medical_properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "uses", force: :cascade do |t|
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
